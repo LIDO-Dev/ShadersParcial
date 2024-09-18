@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
@@ -13,12 +14,16 @@ public class FirstPersonMovement : MonoBehaviour
     private float _xAxis, _zAxis;
     private Vector3 _dir;
 
+    [Header("<color=purple>Audio</color>")]
+    [SerializeField] private AudioClip[] _stepClips;
+
     [Header("Running")]
     public bool canRun = true;
     public bool IsRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode runningKey = KeyCode.LeftShift;
 
+    private AudioSource _source;
     Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
@@ -34,6 +39,8 @@ public class FirstPersonMovement : MonoBehaviour
         {
             _animator = GetComponentInChildren<Animator>();
         }
+
+        _source = GetComponent<AudioSource>();
     }
 
     void FixedUpdate()
@@ -65,5 +72,17 @@ public class FirstPersonMovement : MonoBehaviour
         _zAxis = Input.GetAxis($"Vertical");
 
         _dir = (transform.right * _xAxis + transform.forward * _zAxis).normalized;
+    }
+
+    public void PlayStepClip()
+    {
+        if (_source.isPlaying)
+        {
+            _source.Stop();
+        }
+
+        _source.clip = _stepClips[Random.Range(0, _stepClips.Length)];
+
+        _source.Play();
     }
 }

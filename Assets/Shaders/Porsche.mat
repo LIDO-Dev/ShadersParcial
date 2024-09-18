@@ -29,11 +29,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PorscheDetails:
-        m_Texture: {fileID: 2800000, guid: 704b3f3c04154c942aaeacf4976c143a, type: 3}
+        m_Texture: {fileID: 2800000, guid: df31f0d60063bbc45a47fccad97e33a9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PorscheGray:
-        m_Texture: {fileID: 2800000, guid: 2b6dfea4e3efa9544969925c4e05acbf, type: 3}
+        m_Texture: {fileID: 2800000, guid: ec52466fa46fa9042bb41f9e655e0ddb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PorscheLights:
@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _PorscheTexture:
-        m_Texture: {fileID: 2800000, guid: 106f25855cdf0e14ca043e29d1600138, type: 3}
+        m_Texture: {fileID: 2800000, guid: 846bfe1da654c874582bbf5fbdeb8cff, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -61,7 +61,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _PorscheColor: {r: 1, g: 1, b: 1, a: 0}
+    - _PorscheColor: {r: 0.7169812, g: 0.29824838, b: 0.29423285, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &3339078907621937179
 MonoBehaviour:

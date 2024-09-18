@@ -24,6 +24,12 @@
     "m_CategoryData": [
         {
             "m_Id": "3a110ccc32fa4c61915d58920f982b00"
+        },
+        {
+            "m_Id": "1e28d371c7e8467aacb70ff80a140066"
+        },
+        {
+            "m_Id": "452900334aa3425fa95f024a09e8abfc"
         }
     ],
     "m_Nodes": [
@@ -1101,6 +1107,27 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "1e28d371c7e8467aacb70ff80a140066",
+    "m_Name": "Textures And Look",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "6e5f8175a4164bf583d90e0f9d7bc440"
+        },
+        {
+            "m_Id": "044fde00425d4f21a6e3a57a434f4a7c"
+        },
+        {
+            "m_Id": "50c448d98b8b447fa21b90113f6a7c8b"
+        },
+        {
+            "m_Id": "b9d0c43f354c406badea2b1abe5746b2"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector1MaterialSlot",
     "m_ObjectId": "1e60916e1f164f619ca3630bf9554391",
     "m_Id": 0,
@@ -1526,23 +1553,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "3a110ccc32fa4c61915d58920f982b00",
     "m_Name": "",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "6e5f8175a4164bf583d90e0f9d7bc440"
-        },
-        {
-            "m_Id": "50c448d98b8b447fa21b90113f6a7c8b"
-        },
-        {
-            "m_Id": "044fde00425d4f21a6e3a57a434f4a7c"
-        },
-        {
-            "m_Id": "b9d0c43f354c406badea2b1abe5746b2"
-        },
-        {
-            "m_Id": "7b910ffe37c9457d96197dac57151f99"
-        }
-    ]
+    "m_ChildObjectList": []
 }
 
 {
@@ -1729,6 +1740,18 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "452900334aa3425fa95f024a09e8abfc",
+    "m_Name": "Tiling",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "7b910ffe37c9457d96197dac57151f99"
+        }
+    ]
 }
 
 {
