@@ -4,7 +4,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class FirstPersonMovement : MonoBehaviour
 {
+    [Header("<color=green>Running</color>")]
+    public bool canRun = true;
     public float speed = 5;
+    public bool _isRunning { get; private set; }
+    public float runSpeed = 9;
+    public KeyCode _runningKey = KeyCode.LeftShift;
 
     [Header("<color=yellow>Animator</color>")]
     [SerializeField] private Animator _animator;
@@ -16,43 +21,46 @@ public class FirstPersonMovement : MonoBehaviour
 
     [Header("<color=purple>Audio</color>")]
     [SerializeField] private AudioClip[] _stepClips;
-
-    [Header("Running")]
-    public bool canRun = true;
-    public bool IsRunning { get; private set; }
-    public float runSpeed = 9;
-    public KeyCode runningKey = KeyCode.LeftShift;
+    [SerializeField] private AudioClip[] _jumpClips;
+    [SerializeField] private AudioClip[] _landClips;
 
     private AudioSource _source;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody;
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new List<System.Func<float>>();
-
-
 
     void Awake()
     {
         // Get the rigidbody on this.
         rigidbody = GetComponent<Rigidbody>();
 
-         if(!_animator)
+        if(!_animator)
         {
             _animator = GetComponentInChildren<Animator>();
         }
-
-        _source = GetComponent<AudioSource>();
+        
+        _source = GetComponent<AudioSource>();        
     }
 
     void FixedUpdate()
     {
         // Update IsRunning from input.
-        IsRunning = canRun && Input.GetKey(runningKey);
+        _isRunning = canRun && Input.GetKey(_runningKey);
 
         // Get targetMovingSpeed.
-        float targetMovingSpeed = IsRunning ? runSpeed : speed;
+        float targetMovingSpeed = _isRunning ? runSpeed : speed;
         if (speedOverrides.Count > 0)
         {
             targetMovingSpeed = speedOverrides[speedOverrides.Count - 1]();
+        }
+
+        if(_isRunning == true)
+        {
+            _animator.SetBool("Run", true);
+        }
+        else
+        {
+            _animator.SetBool("Run", false);
         }
 
         // Get targetVelocity from input.
@@ -64,6 +72,7 @@ public class FirstPersonMovement : MonoBehaviour
 
     private void Update()
     {
+
         _animator.SetFloat(_xAxisName, _xAxis);
         _animator.SetFloat(_zAxisName, _zAxis);
         _animator.SetBool(_isMoving, (_xAxis != 0 || _zAxis != 0));
@@ -85,4 +94,28 @@ public class FirstPersonMovement : MonoBehaviour
 
         _source.Play();
     }
+
+        public void PlayJumpClip()
+    {
+        if (_source.isPlaying)
+        {
+            _source.Stop();
+        }
+
+        _source.clip = _jumpClips[Random.Range(0, _jumpClips.Length)];
+
+        _source.Play();
+    }  
+
+        public void PlayLandClip()
+    {
+        if (_source.isPlaying)
+        {
+            _source.Stop();
+        }
+
+        _source.clip = _landClips[Random.Range(0, _landClips.Length)];
+
+        _source.Play();
+    }      
 }
