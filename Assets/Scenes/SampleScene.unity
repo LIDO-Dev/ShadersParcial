@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0077951457, g: 0.007931787, b: 0.009462216, a: 1}
+  m_IndirectSpecularColor: {r: 0.0077990857, g: 0.00793942, b: 0.009472827, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -148,7 +148,7 @@ Transform:
   m_GameObject: {fileID: 189214395}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.39339495, z: -0, w: 0.91936964}
-  m_LocalPosition: {x: 31.431051, y: 53.17, z: -7.3480906}
+  m_LocalPosition: {x: 31.431051, y: 23.539997, z: -7.3480906}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -363,7 +363,7 @@ PrefabInstance:
     - target: {fileID: 3931513257226688838, guid: c317d9b8c279b7043bc880352e38335b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 53.117554
+      value: 23.487553
       objectReference: {fileID: 0}
     - target: {fileID: 3931513257226688838, guid: c317d9b8c279b7043bc880352e38335b,
         type: 3}
@@ -429,6 +429,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6899319524584317162, guid: c317d9b8c279b7043bc880352e38335b,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.89
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -631,7 +636,7 @@ Transform:
   m_GameObject: {fileID: 1963107979}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.9125419, y: 4.93186, z: 1.7224302}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1201,7 +1206,7 @@ PrefabInstance:
     - target: {fileID: 9131154816836147485, guid: 793becea913238e46ae4cf198ea87f26,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 54.63
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 9131154816836147485, guid: 793becea913238e46ae4cf198ea87f26,
         type: 3}
@@ -2061,7 +2066,7 @@ PrefabInstance:
     - target: {fileID: 3976053672937791164, guid: 1168028adf0d59e4b9131fe3d174a62e,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 75.9
+      value: 46.27
       objectReference: {fileID: 0}
     - target: {fileID: 3976053672937791164, guid: 1168028adf0d59e4b9131fe3d174a62e,
         type: 3}
@@ -2109,7 +2114,10 @@ PrefabInstance:
       value: Road_Final
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7727672459233585659, guid: 1168028adf0d59e4b9131fe3d174a62e, type: 3}
+    - {fileID: 2574966282424931002, guid: 1168028adf0d59e4b9131fe3d174a62e, type: 3}
+    - {fileID: 4525484196489240336, guid: 1168028adf0d59e4b9131fe3d174a62e, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1168028adf0d59e4b9131fe3d174a62e, type: 3}
