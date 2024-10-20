@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0077972626, g: 0.007935936, b: 0.009468917, a: 1}
+  m_IndirectSpecularColor: {r: 0.0078023113, g: 0.007937367, b: 0.009470158, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -330,6 +330,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1654899006105567084, guid: c317d9b8c279b7043bc880352e38335b,
+        type: 3}
+      propertyPath: field of view
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654899006105567084, guid: c317d9b8c279b7043bc880352e38335b,
+        type: 3}
+      propertyPath: m_FocalLength
+      value: 20.78461
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654899006105567084, guid: c317d9b8c279b7043bc880352e38335b,
+        type: 3}
+      propertyPath: m_projectionMatrixMode
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1940902891246132170, guid: c317d9b8c279b7043bc880352e38335b,
         type: 3}
       propertyPath: isGrounded
@@ -339,6 +354,11 @@ PrefabInstance:
         type: 3}
       propertyPath: distanceThreshold
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432096812267727933, guid: c317d9b8c279b7043bc880352e38335b,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
       objectReference: {fileID: 0}
     - target: {fileID: 3931513257226688838, guid: c317d9b8c279b7043bc880352e38335b,
         type: 3}
