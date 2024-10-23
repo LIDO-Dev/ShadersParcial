@@ -10,6 +10,10 @@ public class FirstPersonMovement : MonoBehaviour
     public bool _isRunning { get; private set; }
     public float runSpeed = 9;
     public KeyCode _runningKey = KeyCode.LeftShift;
+    public KeyCode _interactKey = KeyCode.E;
+    public Camera _camera;
+    [SerializeField] private float _intRayDist = 2.0f;
+    [SerializeField] private LayerMask _intMask;
 
     [Header("<color=yellow>Animator</color>")]
     [SerializeField] private Animator _animator;
@@ -23,6 +27,9 @@ public class FirstPersonMovement : MonoBehaviour
     [SerializeField] private AudioClip[] _stepClips;
     [SerializeField] private AudioClip[] _jumpClips;
     [SerializeField] private AudioClip[] _landClips;
+
+    private Ray _intRay, _movRay;
+    private RaycastHit _intHit;
 
     private AudioSource _source;
     new Rigidbody rigidbody;
@@ -81,6 +88,11 @@ public class FirstPersonMovement : MonoBehaviour
         _zAxis = Input.GetAxis($"Vertical");
 
         _dir = (transform.right * _xAxis + transform.forward * _zAxis).normalized;
+
+        if (Input.GetKeyDown(_interactKey))
+        {
+            Interact();
+        }
     }
 
     public void PlayStepClip()
@@ -95,7 +107,7 @@ public class FirstPersonMovement : MonoBehaviour
         _source.Play();
     }
 
-        public void PlayJumpClip()
+    public void PlayJumpClip()
     {
         if (_source.isPlaying)
         {
@@ -107,7 +119,7 @@ public class FirstPersonMovement : MonoBehaviour
         _source.Play();
     }  
 
-        public void PlayLandClip()
+    public void PlayLandClip()
     {
         if (_source.isPlaying)
         {
@@ -117,5 +129,18 @@ public class FirstPersonMovement : MonoBehaviour
         _source.clip = _landClips[Random.Range(0, _landClips.Length)];
 
         _source.Play();
-    }      
+    } 
+
+    private void Interact()
+    {
+        _intRay = new Ray(_camera.transform.position, _camera.transform.forward);
+
+        if(Physics.SphereCast(_intRay, 0.25f, out _intHit, _intRayDist, _intMask))
+        {
+            if(_intHit.collider.TryGetComponent(out IInteract intObj))
+            {
+                intObj.OnInteract();
+            }
+        }
+    }     
 }
