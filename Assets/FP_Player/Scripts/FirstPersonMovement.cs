@@ -92,6 +92,7 @@ public class FirstPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(_interactKey))
         {
             Interact();
+            Debug.Log("Interaction");
         }
     }
 
