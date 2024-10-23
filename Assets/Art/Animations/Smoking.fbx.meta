@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 39dce9e5c4a7d4a44981ca5c145b0fb2
+guid: f550bed1c0ac8994a9c148723318ee92
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -93,7 +93,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Light Up
       takeName: mixamo.com
-      internalID: 8842878171678463616
+      internalID: 9111558908952476143
       firstFrame: 0
       lastFrame: 280
       wrapMode: 0
@@ -122,7 +122,7 @@ ModelImporter:
     - serializedVersion: 16
       name: Stand Lighted
       takeName: mixamo.com
-      internalID: -6556537087697243763
+      internalID: -864825200672550400
       firstFrame: 280
       lastFrame: 307
       wrapMode: 0
