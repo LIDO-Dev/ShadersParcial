@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
 public class FirstPersonMovement : MonoBehaviour
@@ -11,6 +12,7 @@ public class FirstPersonMovement : MonoBehaviour
     public float runSpeed = 9;
     public KeyCode _runningKey = KeyCode.LeftShift;
     public KeyCode _interactKey = KeyCode.E;
+    public KeyCode _restartKey = KeyCode.R;
     public Camera _camera;
     [SerializeField] private float _intRayDist = 2.0f;
     [SerializeField] private LayerMask _intMask;
@@ -92,7 +94,11 @@ public class FirstPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(_interactKey))
         {
             Interact();
-            Debug.Log("Interaction");
+        }
+
+        if (Input.GetKeyDown(_restartKey))
+        {
+            Restart();
         }
     }
 
@@ -143,5 +149,10 @@ public class FirstPersonMovement : MonoBehaviour
                 intObj.OnInteract();
             }
         }
-    }     
+    }  
+
+    private void Restart()
+    {
+        SceneManager.LoadScene(0);
+    }   
 }

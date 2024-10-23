@@ -65,8 +65,8 @@ ModelImporter:
       name: Stand
       takeName: mixamo.com
       internalID: -4469183485442372851
-      firstFrame: 475
-      lastFrame: 537
+      firstFrame: 9
+      lastFrame: 12
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

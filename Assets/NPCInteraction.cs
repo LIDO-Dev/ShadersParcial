@@ -16,6 +16,5 @@ public class NPCInteraction : MonoBehaviour, IInteract
     public void OnInteract()
     {
         _anim.SetTrigger(_interactionName);
-        Debug.Log("Interaction");
     }
 }
