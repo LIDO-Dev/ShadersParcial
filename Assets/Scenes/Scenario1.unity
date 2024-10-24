@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: b73addf61e9e87841be48bdfb4f7c955, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0077951197, g: 0.007937845, b: 0.009467474, a: 1}
+  m_IndirectSpecularColor: {r: 0.0078076934, g: 0.0079522105, b: 0.00947659, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1357,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4708e59890aa0ee44a90ff97aeb72de1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeModifier: -1.5
+  _timeModifier: -0.5
 --- !u!4 &1963107981
 Transform:
   m_ObjectHideFlags: 0
@@ -2046,6 +2046,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -14.925614
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379462355871434915, guid: 8c9272cbb8a4bf04d93e038a7c7b6430,
+        type: 3}
+      propertyPath: m_UpdateMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379462355871434915, guid: 8c9272cbb8a4bf04d93e038a7c7b6430,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8463751170574346623, guid: 8c9272cbb8a4bf04d93e038a7c7b6430,
         type: 3}
