@@ -44,12 +44,13 @@ Material:
     m_Floats:
     - _DisolvingSpeed: 0.01
     - _DissolveAmount: 0.3
+    - _DissolveSample: 0
     - _LineLenght: 0.5
-    - _NoiseScale: 30
+    - _NoiseScale: 0.7
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _DissolveColor: {r: 0.5849056, g: 0.1107937, b: 0, a: 0}
+    - _DissolveColor: {r: 1, g: 0.18791945, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2706424608758853997
 MonoBehaviour:
