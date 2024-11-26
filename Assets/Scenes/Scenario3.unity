@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: b73addf61e9e87841be48bdfb4f7c955, type: 3}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0078018657, g: 0.007945256, b: 0.009469837, a: 1}
+  m_IndirectSpecularColor: {r: 0.007793885, g: 0.007944599, b: 0.00947377, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1622,12 +1622,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: fcfe58c6f0609a8448f59d1d2329ecce, type: 2}
+      objectReference: {fileID: 2100000, guid: 8ed00075aec792048b594a315d15773e, type: 2}
     - target: {fileID: 893710339165969706, guid: d0fa34596713e1a43a3fd22c73cebdf9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 3acafe21289822b43998caae83b48ba3, type: 2}
+      objectReference: {fileID: 2100000, guid: b5c7835ee36065b42b59e410cd5c4894, type: 2}
     - target: {fileID: 919132149155446097, guid: d0fa34596713e1a43a3fd22c73cebdf9,
         type: 3}
       propertyPath: m_Name
@@ -1637,7 +1637,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5d06f8e18910f374cb05d40778b1eed7, type: 2}
+      objectReference: {fileID: 2100000, guid: db4012bc6537d26428f95ff634b573d8, type: 2}
     - target: {fileID: 4012238859112468967, guid: d0fa34596713e1a43a3fd22c73cebdf9,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1647,7 +1647,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 5d06f8e18910f374cb05d40778b1eed7, type: 2}
+      objectReference: {fileID: 2100000, guid: db4012bc6537d26428f95ff634b573d8, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -3891,7 +3891,7 @@ PrefabInstance:
         type: 3}
       propertyPath: _clip
       value: 
-      objectReference: {fileID: 8300000, guid: 01e71638d275fc048917160082e7ee80, type: 3}
+      objectReference: {fileID: 8300000, guid: 7ec49e1981a3fa1419c593655342feb0, type: 3}
     - target: {fileID: 3059704543764384963, guid: 247a2a63c61f8bb48801236c99a06fb4,
         type: 3}
       propertyPath: m_Volume
@@ -3901,7 +3901,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 01e71638d275fc048917160082e7ee80, type: 3}
+      objectReference: {fileID: 8300000, guid: 7ec49e1981a3fa1419c593655342feb0, type: 3}
     - target: {fileID: 5339108943828601060, guid: 247a2a63c61f8bb48801236c99a06fb4,
         type: 3}
       propertyPath: m_Name
