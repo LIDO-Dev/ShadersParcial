@@ -13,6 +13,7 @@ public class FirstPersonMovement : MonoBehaviour
     public KeyCode _runningKey = KeyCode.LeftShift;
     public KeyCode _interactKey = KeyCode.E;
     public KeyCode _restartKey = KeyCode.R;
+    public KeyCode _nextSceneKey = KeyCode.N;
     public Camera _camera;
     [SerializeField] private float _intRayDist = 2.0f;
     [SerializeField] private LayerMask _intMask;
@@ -99,6 +100,11 @@ public class FirstPersonMovement : MonoBehaviour
         if (Input.GetKeyDown(_restartKey))
         {
             Restart();
+        }
+
+        if (Input.GetKeyDown(_nextSceneKey))
+        {
+            SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 
