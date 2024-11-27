@@ -42,7 +42,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 20a317c7c8b4f274cbb82856c34e8ba5, type: 2}
+  m_Motion: {fileID: 7400000, guid: 83b47e022184c0c47a713944612f5a0b, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -54,7 +54,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Point Light (7)
+  m_Name: Point Light Tower
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
